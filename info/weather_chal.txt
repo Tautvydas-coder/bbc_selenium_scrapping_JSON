@@ -1,0 +1,31 @@
+We will use the link:
+https://www.bbc.com/weather
+Also for the getting the information from the page
+We will use the Selenium library.
+
+So: 
+
+In the input you should input the city, load the page with the city and
+Grab the information about the weather for the nearest 3 days
+You could input any city names.
+Then you should to save all the information in to the dict and then save the dict
+In to the JSON file
+The structure of the JSON is described here
+
+{
+   "city": {
+      "Vilnius": {
+         "DayOfTheWeek": {
+             "Monday": {
+                 "temperature": "23",
+                 'description': "Sunny and a gentle breeze"
+              },
+             'Tuesday': {
+                 "temperature": "23",
+                 'description': "Sunny and a gentle breeze"
+              },
+         }
+      }
+   }
+}
+
