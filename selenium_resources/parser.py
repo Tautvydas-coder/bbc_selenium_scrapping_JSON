@@ -6,7 +6,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver import ActionChains
 
 driver = driver_service()
-driver.get('chrome://settings/clearBrowserData')
+driver.get(CLEAR_HISTORY)
 
 
 def open_website():
@@ -16,10 +16,21 @@ def open_website():
 
 
 def accept_personal_data():
-    data = WebDriverWait(driver, 15).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="weather-home"]/body/div[9]/div[2]/div[1]/div[2]/div[2]/button[1]')))
+    data = WebDriverWait(driver, 15).until(EC.element_to_be_clickable(
+        (By.XPATH, ACCEPT_PERSONAL_DATA)))
     ActionChains(driver).move_to_element(data).click(data).perform()
 
 
 def accept_cookies():
-    cookies = driver.find_element(By.ID, 'bbccookies-continue-button')
+    cookies = WebDriverWait(driver, 15).until(EC.element_to_be_clickable((By.ID, ACCEPT_COOKIES)))
     ActionChains(driver).move_to_element(cookies).click(cookies).perform()
+
+
+def search_bar():
+    input_bar = WebDriverWait(driver, 15).until(EC.element_to_be_clickable((By.ID, SEARCH_INPUT)))
+    search_button = WebDriverWait(driver, 15).until(EC.element_to_be_clickable((By.XPATH, SEARCH_BUTTON)))
+    ActionChains(driver).move_to_element(input_bar).click().send_keys('TEST').move_to_element(search_button).click().perform()
+
+
+def input_city():
+    pass
