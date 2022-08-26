@@ -8,3 +8,5 @@ from selenium_resources.parser import *
 
 if __name__ == '__main__':
     open_website()
+    accept_personal_data()
+    accept_cookies()
