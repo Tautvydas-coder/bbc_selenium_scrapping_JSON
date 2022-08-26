@@ -13,3 +13,8 @@ ACCEPT_COOKIES = 'bbccookies-continue-button'
 # Search bar
 SEARCH_INPUT = 'ls-c-search__input-label'
 SEARCH_BUTTON = '//*[@id="wr-location-search-container"]/div/div[1]/form/div/input'
+
+# Cities
+city1 = 'Kaunas'
+city2 = 'New York'
+city3 = 'Tallinn'

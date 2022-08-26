@@ -33,4 +33,5 @@ def search_bar():
 
 
 def input_city():
-    pass
+    cities = [city1,city2,city3]
+
