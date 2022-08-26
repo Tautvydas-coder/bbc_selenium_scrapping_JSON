@@ -1,0 +1,37 @@
+The Goal:
+Create the JSON file:
+
+File format:
+{
+   DayOfTheWeek: {
+      City: {
+         Vilnius: {
+             Monday: 23,
+             Tuesday: 24,
+             Wednesday: 25,
+         },
+         Kaunas: {
+             Monday: 23,
+             Tuesday: 24,
+             Wednesday: 25,
+         },
+         Klaipeda: {
+             Monday: 23,
+             Tuesday: 24,
+             Wednesday: 25,
+         }
+      }
+   }
+}
+
+We will use the url:
+https://www.bbc.com/weather
+and Selenium as page parser.
+You need to create the script that will open the URL,
+Input in the field Three different Cities (you could choose
+any you wish)(It could be the cities of your next trip or any)
+Then You need to grab the temperature for the nearest 3 days
+and grab the information in the Dict described here
+then you need to save all this to the json file
+The result of this job should be the Python script as a source
+and the ouput json file
