@@ -29,9 +29,15 @@ def accept_cookies():
 def search_bar():
     input_bar = WebDriverWait(driver, 15).until(EC.element_to_be_clickable((By.ID, SEARCH_INPUT)))
     search_button = WebDriverWait(driver, 15).until(EC.element_to_be_clickable((By.XPATH, SEARCH_BUTTON)))
-    ActionChains(driver).move_to_element(input_bar).click().send_keys('TEST').move_to_element(search_button).click().perform()
+    ActionChains(driver).move_to_element(input_bar).click().send_keys('TEST').move_to_element(
+        search_button).click().perform()
 
 
 def input_city():
-    cities = [city1,city2,city3]
+    cities = [city1, city2, city3]
 
+
+def close_windows():
+    driver.close()
+    driver.quit()
+    print('Test completed')

@@ -11,3 +11,4 @@ if __name__ == '__main__':
     accept_cookies()
     search_bar()
     input_city()
+    # close_windows()
