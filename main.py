@@ -10,5 +10,5 @@ if __name__ == '__main__':
     accept_personal_data()
     accept_cookies()
     search_bar()
-    input_city()
-    # close_windows()
+    input_city(temp=0)
+    close_windows()

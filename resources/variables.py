@@ -16,5 +16,5 @@ SEARCH_BUTTON = '//*[@id="wr-location-search-container"]/div/div[1]/form/div/inp
 
 # Cities
 city1 = 'Kaunas'
-city2 = 'New York'
+city2 = 'Coober Pedy'
 city3 = 'Tallinn'
