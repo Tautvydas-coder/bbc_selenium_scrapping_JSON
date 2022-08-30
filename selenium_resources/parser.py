@@ -1,5 +1,4 @@
 import time
-
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
 from webdriver_service.activate_drivers import driver_service
@@ -30,7 +29,7 @@ def accept_cookies():
 
 def search_bar():
     temp = 0
-    while temp<3:
+    while temp < 3:
         input_bar = WebDriverWait(driver, 15).until(EC.element_to_be_clickable((By.ID, SEARCH_INPUT)))
         search_button = WebDriverWait(driver, 15).until(EC.element_to_be_clickable((By.XPATH, SEARCH_BUTTON)))
         ActionChains(driver).move_to_element(input_bar).click().perform()
