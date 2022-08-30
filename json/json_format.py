@@ -1,18 +1,65 @@
 import json
-
+from resources.variables import *
 dict = {
     'city':
         {
-            'Vilnius':
+            f'{city1}':
                 {
                     'DayOfTheWeek':
                         {
-                            'Monday':
+                            'day1':
                                 {
                                     'temperature': '23',
                                     'description': 'Sunny and a gentle breeze'
                                 },
-                            'Tuesday':
+                            'day2':
+                                {
+                                    'temperature': '23',
+                                    'description': 'Sunny and a gentle breeze'
+                                },
+                            'day3':
+                                {
+                                    'temperature': '23',
+                                    'description': 'Sunny and a gentle breeze'
+                                }
+                        }
+                },
+            f'{city2}':
+                {
+                    'DayOfTheWeek':
+                        {
+                            'day1':
+                                {
+                                    'temperature': '23',
+                                    'description': 'Sunny and a gentle breeze'
+                                },
+                            'day2':
+                                {
+                                    'temperature': '23',
+                                    'description': 'Sunny and a gentle breeze'
+                                },
+                            'day3':
+                                {
+                                    'temperature': '23',
+                                    'description': 'Sunny and a gentle breeze'
+                                }
+                        }
+                },
+            f'{city3}':
+                {
+                    'DayOfTheWeek':
+                        {
+                            'day1':
+                                {
+                                    'temperature': '23',
+                                    'description': 'Sunny and a gentle breeze'
+                                },
+                            'day2':
+                                {
+                                    'temperature': '23',
+                                    'description': 'Sunny and a gentle breeze'
+                                },
+                            'day3':
                                 {
                                     'temperature': '23',
                                     'description': 'Sunny and a gentle breeze'
@@ -22,5 +69,6 @@ dict = {
         }
 }
 
-print(dict['city']['Vilnius']['DayOfTheWeek']['Tuesday']['description'])
+# print(dict['city']['Vilnius']['DayOfTheWeek']['Tuesday']['description'])
+print(dict)
 

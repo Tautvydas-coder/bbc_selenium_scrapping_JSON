@@ -9,5 +9,6 @@ if __name__ == '__main__':
     accept_personal_data()
     accept_cookies()
     search_bar()
-    input_city(temp=0)
+    input_city(value=0)
+    # fetch_days()
     close_windows()
