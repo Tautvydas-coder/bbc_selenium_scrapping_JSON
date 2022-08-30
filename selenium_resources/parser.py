@@ -48,12 +48,19 @@ def input_city(value):
 
 def fetch_days():
     day_number = 1
+    days = []
+    days_full = []
     while day_number < 4:
         day_element = WebDriverWait(driver, 20).until(
             EC.presence_of_element_located((By.XPATH, f'//*[@id="daylink-{day_number}"]/div[2]')))
-        day = list(day_element.get_attribute('aria-label').split(" "))
-        print(day[0])
+        day = list(day_element.get_attribute('aria-label').split(" "))[0]
+        days.append(day)
+        days_full.append(days)
         day_number += 1
+    print(days)
+    print(days_full)
+    print(days_full[1][2])
+    return days_full
 
 
 # Kaunas
