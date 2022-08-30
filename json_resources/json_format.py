@@ -13,7 +13,7 @@ def dictionary():
                             {
                                 f'{fetch_days()[0][0]}':
                                     {
-                                        'temperature': '23',
+                                        'temperature': f'{fetch_temperature()[0][0]}',
                                         'description': 'Sunny and a gentle breeze'
                                     },
                                 f'{fetch_days()[0][1]}':

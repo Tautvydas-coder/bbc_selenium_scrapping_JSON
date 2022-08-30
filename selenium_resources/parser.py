@@ -57,11 +57,7 @@ def fetch_days():
         days.append(day)
         days_full.append(days)
         day_number += 1
-    print(days)
-    print(days_full)
-    print(days_full[1][2])
     return days_full
-
 
 # Kaunas
 # // *[ @ id = "daylink-1"] / div[2] / div / span[1] / text()[1]
@@ -71,6 +67,26 @@ def fetch_days():
 # // *[ @ id = "daylink-1"] / div[2] / div / span[1] / text()[1]
 # // *[ @ id = "daylink-2"] / div[2] / div / span[1] / text()[1]
 # // *[ @ id = "daylink-3"] / div[2] / div / span[1] / text()[1]
+
+def fetch_temperature():
+    temp_number = 1
+    temperatures = []
+    temperatures_full = []
+    while temp_number < 4:
+        temperature_element = WebDriverWait(driver, 20).until(
+            EC.presence_of_element_located((By.XPATH, f'//*[@id="daylink-1"]/div[4]/div[1]/div/div[4]/div/div[1]/span[2]')))
+        # temperature = list(temperature_element.get_attribute('aria-label').split(" "))[0]
+        temperature = temperature_element.get_attribute('wr-value--temperature')
+        print(temperature)
+    #     temperatures.append(day)
+    #     temperatures_full.append(temperatures)
+    #     temp_number += 1
+    #     print(temperatures_full)
+    # return temperatures_full
+#Tallinn
+#//*[@id="daylink-1"]/div[4]/div[1]/div/div[4]/div/div[1]/span[2]/span/span[1]
+#//*[@id="daylink-2"]/div[4]/div[1]/div/div[4]/div/div[1]/span[2]/span/span[1]
+#//*[@id="daylink-3"]/div[4]/div[1]/div/div[4]/div/div[1]/span[2]/span/span[1]
 
 def close_windows():
     driver.close()
