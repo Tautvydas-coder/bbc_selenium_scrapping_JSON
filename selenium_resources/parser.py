@@ -38,15 +38,20 @@ def search_bar():
         ActionChains(driver).move_to_element(search_button).double_click().perform()
         value += 1
         time.sleep(1)
+
+        fetch_description()
+
         fetch_days()
         temperature = fetch_temperature()
         temper_full_list.append(temperature)
     return temper_full_list
 
+
 def input_city(value):
     cities = [city1, city2, city3]
     time.sleep(1)
     return cities[value]
+
 
 
 def fetch_days():
@@ -71,15 +76,31 @@ def fetch_temperature():
         temperature_element = WebDriverWait(driver, 20).until(
             EC.presence_of_element_located((By.CSS_SELECTOR,
                                             f'#daylink-{temp_number} > div.wr-day__body > div.wr-day__details-container > div > div.wr-day__temperature > div > div.wr-day-temperature__high > span.wr-day-temperature__high-value > span > span.wr-value--temperature--c')))
-        temperatures = temperature_element.text
-        one_city_temp_list.append(temperatures)
+        temperature = temperature_element.text
+        one_city_temp_list.append(temperature)
         temp_number += 1
     return one_city_temp_list
 
-# Tallinn
-# //*[@id="daylink-1"]/div[4]/div[1]/div/div[4]/div/div[1]/span[2]/span/span[1]
-# //*[@id="daylink-2"]/div[4]/div[1]/div/div[4]/div/div[1]/span[2]/span/span[1]
-# //*[@id="daylink-3"]/div[4]/div[1]/div/div[4]/div/div[1]/span[2]/span/span[1]
+
+def fetch_description():
+    description_number = 1
+    one_city_descrip_list = []
+    while description_number < 4:
+        time.sleep(1)
+        description_element = WebDriverWait(driver, 20).until(
+            EC.presence_of_element_located((By.XPATH,
+                                            f'/html/body/div[8]/div/div[4]/div/div/div[1]/div[3]/div/div/div/div/div/ol/li[{description_number}]/a/div[4]/div[1]/div/div[1]')))
+        description = description_element.text
+        print(description)
+        one_city_descrip_list.append(description)
+        print(one_city_descrip_list)
+        description_number += 1
+    # return one_city_descrip_list
+#/html/body/div[8]/div/div[4]/div/div/div[1]/div[3]/div/div/div/div/div/ol/li[3]/a/div[4]/div[1]/div/div[1]
+#daylink-1 > div.wr-day__body > div.wr-day__weather-type-description-container > div
+#daylink-2 > div.wr-day__body > div.wr-day__weather-type-description-container > div
+#daylink-1 > div.wr-day__body > div.wr-day__weather-type-description-container > div
+#daylink-2 > div.wr-day__body > div.wr-day__weather-type-description-container > div
 
 def close_windows():
     driver.close()

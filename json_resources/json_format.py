@@ -3,7 +3,7 @@ from resources.variables import *
 from selenium_resources.parser import *
 from main import *
 
-def dictionary(listas_temp):
+def dictionary(temperatur_list):
     dict = {
         'city':
             {
@@ -13,17 +13,17 @@ def dictionary(listas_temp):
                             {
                                 f'{fetch_days()[0][0]}':
                                     {
-                                        'temperature': f'{listas_temp[0][0]}',
+                                        'temperature': f'{temperatur_list[0][0]}',
                                         'description': 'Sunny and a gentle breeze'
                                     },
                                 f'{fetch_days()[0][1]}':
                                     {
-                                        'temperature': f'{listas_temp[0][1]}',
+                                        'temperature': f'{temperatur_list[0][1]}',
                                         'description': 'Sunny and a gentle breeze'
                                     },
                                 f'{fetch_days()[0][2]}':
                                     {
-                                        'temperature': f'{listas_temp[0][2]}',
+                                        'temperature': f'{temperatur_list[0][2]}',
                                         'description': 'Sunny and a gentle breeze'
                                     }
                             }
@@ -34,17 +34,17 @@ def dictionary(listas_temp):
                             {
                                 f'{fetch_days()[1][0]}':
                                     {
-                                        'temperature': f'{listas_temp[1][0]}',
+                                        'temperature': f'{temperatur_list[1][0]}',
                                         'description': 'Sunny and a gentle breeze'
                                     },
                                 f'{fetch_days()[1][1]}':
                                     {
-                                        'temperature': f'{listas_temp[1][1]}',
+                                        'temperature': f'{temperatur_list[1][1]}',
                                         'description': 'Sunny and a gentle breeze'
                                     },
                                 f'{fetch_days()[1][2]}':
                                     {
-                                        'temperature': f'{listas_temp[1][2]}',
+                                        'temperature': f'{temperatur_list[1][2]}',
                                         'description': 'Sunny and a gentle breeze'
                                     }
                             }
@@ -55,17 +55,17 @@ def dictionary(listas_temp):
                             {
                                 f'{fetch_days()[2][0]}':
                                     {
-                                        'temperature': f'{listas_temp[2][0]}',
+                                        'temperature': f'{temperatur_list[2][0]}',
                                         'description': 'Sunny and a gentle breeze'
                                     },
                                 f'{fetch_days()[2][1]}':
                                     {
-                                        'temperature': f'{listas_temp[2][1]}',
+                                        'temperature': f'{temperatur_list[2][1]}',
                                         'description': 'Sunny and a gentle breeze'
                                     },
                                 f'{fetch_days()[2][2]}':
                                     {
-                                        'temperature': f'{listas_temp[2][2]}',
+                                        'temperature': f'{temperatur_list[2][2]}',
                                         'description': 'Sunny and a gentle breeze'
                                     }
                             }
