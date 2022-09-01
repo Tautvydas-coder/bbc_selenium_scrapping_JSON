@@ -11,20 +11,20 @@ def dictionary(temperatur_list):
                     {
                         'DayOfTheWeek':
                             {
-                                f'{fetch_days()[0][0]}':
-                                    {
-                                        'temperature': f'{temperatur_list[0][0]}',
-                                        'description': 'Sunny and a gentle breeze'
-                                    },
-                                f'{fetch_days()[0][1]}':
+                                f'{temperatur_list[0][0]}':
                                     {
                                         'temperature': f'{temperatur_list[0][1]}',
-                                        'description': 'Sunny and a gentle breeze'
+                                        'description': f'{temperatur_list[0][2]}'
                                     },
-                                f'{fetch_days()[0][2]}':
+                                f'{temperatur_list[0][3]}':
                                     {
-                                        'temperature': f'{temperatur_list[0][2]}',
-                                        'description': 'Sunny and a gentle breeze'
+                                        'temperature': f'{temperatur_list[0][4]}',
+                                        'description': f'{temperatur_list[0][5]}'
+                                    },
+                                f'{temperatur_list[0][6]}':
+                                    {
+                                        'temperature': f'{temperatur_list[0][7]}',
+                                        'description': f'{temperatur_list[0][8]}'
                                     }
                             }
                     },
@@ -32,19 +32,19 @@ def dictionary(temperatur_list):
                     {
                         'DayOfTheWeek':
                             {
-                                f'{fetch_days()[1][0]}':
+                                f'test':
                                     {
-                                        'temperature': f'{temperatur_list[1][0]}',
+                                        'temperature': '23',
                                         'description': 'Sunny and a gentle breeze'
                                     },
-                                f'{fetch_days()[1][1]}':
+                                f'testa':
                                     {
-                                        'temperature': f'{temperatur_list[1][1]}',
+                                        'temperature':  '23',
                                         'description': 'Sunny and a gentle breeze'
                                     },
-                                f'{fetch_days()[1][2]}':
+                                f'tests':
                                     {
-                                        'temperature': f'{temperatur_list[1][2]}',
+                                        'temperature': '23',
                                         'description': 'Sunny and a gentle breeze'
                                     }
                             }
@@ -53,19 +53,19 @@ def dictionary(temperatur_list):
                     {
                         'DayOfTheWeek':
                             {
-                                f'{fetch_days()[2][0]}':
+                                f'teste':
                                     {
-                                        'temperature': f'{temperatur_list[2][0]}',
+                                        'temperature': '23',
                                         'description': 'Sunny and a gentle breeze'
                                     },
-                                f'{fetch_days()[2][1]}':
+                                f'testh':
                                     {
-                                        'temperature': f'{temperatur_list[2][1]}',
+                                        'temperature': '23',
                                         'description': 'Sunny and a gentle breeze'
                                     },
-                                f'{fetch_days()[2][2]}':
+                                f'testy':
                                     {
-                                        'temperature': f'{temperatur_list[2][2]}',
+                                        'temperature': '23',
                                         'description': 'Sunny and a gentle breeze'
                                     }
                             }
