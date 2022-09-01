@@ -1,0 +1,52 @@
+{
+    "city": {
+        "Kaunas": {
+            "DayOfTheWeek": {
+                "Friday": {
+                    "temperature": "17",
+                    "description": "Sunny intervals and a gentle breeze"
+                },
+                "Saturday": {
+                    "temperature": "17",
+                    "description": "Sunny intervals and light winds"
+                },
+                "Sunday": {
+                    "temperature": "18",
+                    "description": "Sunny intervals and light winds"
+                }
+            }
+        },
+        "Coober Pedy": {
+            "DayOfTheWeek": {
+                "Friday": {
+                    "temperature": "20",
+                    "description": "Sunny and a fresh breeze"
+                },
+                "Saturday": {
+                    "temperature": "18",
+                    "description": "Sunny and a fresh breeze"
+                },
+                "Sunday": {
+                    "temperature": "19",
+                    "description": "Sunny and a moderate breeze"
+                }
+            }
+        },
+        "Tallinn": {
+            "DayOfTheWeek": {
+                "Friday": {
+                    "temperature": "14",
+                    "description": "Light rain showers and a gentle breeze"
+                },
+                "Saturday": {
+                    "temperature": "14",
+                    "description": "Sunny intervals and a moderate breeze"
+                },
+                "Sunday": {
+                    "temperature": "13",
+                    "description": "Sunny intervals and a gentle breeze"
+                }
+            }
+        }
+    }
+}

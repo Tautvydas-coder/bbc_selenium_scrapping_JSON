@@ -3,6 +3,7 @@ from resources.variables import *
 from selenium_resources.parser import *
 from main import *
 
+
 def dictionary(temperatur_list):
     dict = {
         'city':
@@ -32,20 +33,20 @@ def dictionary(temperatur_list):
                     {
                         'DayOfTheWeek':
                             {
-                                f'test':
+                                f'{temperatur_list[1][0]}':
                                     {
-                                        'temperature': '23',
-                                        'description': 'Sunny and a gentle breeze'
+                                        'temperature': f'{temperatur_list[1][1]}',
+                                        'description': f'{temperatur_list[1][2]}'
                                     },
-                                f'testa':
+                                f'{temperatur_list[1][3]}':
                                     {
-                                        'temperature':  '23',
-                                        'description': 'Sunny and a gentle breeze'
+                                        'temperature': f'{temperatur_list[1][4]}',
+                                        'description': f'{temperatur_list[1][5]}'
                                     },
-                                f'tests':
+                                f'{temperatur_list[0][6]}':
                                     {
-                                        'temperature': '23',
-                                        'description': 'Sunny and a gentle breeze'
+                                        'temperature': f'{temperatur_list[1][7]}',
+                                        'description': f'{temperatur_list[1][8]}'
                                     }
                             }
                     },
@@ -53,24 +54,28 @@ def dictionary(temperatur_list):
                     {
                         'DayOfTheWeek':
                             {
-                                f'teste':
+                                f'{temperatur_list[2][0]}':
                                     {
-                                        'temperature': '23',
-                                        'description': 'Sunny and a gentle breeze'
+                                        'temperature': f'{temperatur_list[2][1]}',
+                                        'description': f'{temperatur_list[2][2]}'
                                     },
-                                f'testh':
+                                f'{temperatur_list[2][3]}':
                                     {
-                                        'temperature': '23',
-                                        'description': 'Sunny and a gentle breeze'
+                                        'temperature': f'{temperatur_list[2][4]}',
+                                        'description': f'{temperatur_list[2][5]}'
                                     },
-                                f'testy':
+                                f'{temperatur_list[2][6]}':
                                     {
-                                        'temperature': '23',
-                                        'description': 'Sunny and a gentle breeze'
+                                        'temperature': f'{temperatur_list[2][7]}',
+                                        'description': f'{temperatur_list[2][8]}'
                                     }
                             }
                     }
             }
     }
-    # print(dict['city']['Vilnius']['DayOfTheWeek']['Tuesday']['description'])
-    print(dict)
+    json_object = json.dumps(dict, indent=4)
+
+    with open("output/weather_json.json", "w", encoding='utf-8', errors="xmlcharrefreplace") as data:
+        data.write(json_object)
+
+    return dict
